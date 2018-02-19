@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // COMPLETED (3) Replace the Toast with code to start ChildActivity
                 startActivity(startChildActivityIntent);
+                //test
             }
         });
     }
