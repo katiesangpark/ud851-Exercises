@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     // COMPLETED (7) Override onDestroy, call super.onDestroy, and call logAndAppend with ON_DESTROY
     @Override
     protected void onDestroy() {
+        logAndAppend(ON_DESTROY);
         super.onDestroy();
     }
 
