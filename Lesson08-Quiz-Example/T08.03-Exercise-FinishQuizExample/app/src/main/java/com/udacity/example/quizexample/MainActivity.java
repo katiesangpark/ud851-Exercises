@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get the views
-        // TODO (1) You'll probably want more than just the Button
+        // COMPLETED (1) You'll probably want more than just the Button
         mWordTextView = (TextView) findViewById(R.id.text_view_word);
         mDefinitionTextView = (TextView) findViewById(R.id.text_view_definition);
         mButton = (Button) findViewById(R.id.button_next);
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         // Change button text
         mButton.setText(getString(R.string.show_definition));
 
-        // TODO (3) Go to the next word in the Cursor, show the next word and hide the definition
+        // COMPLETED (3) Go to the next word in the Cursor, show the next word and hide the definition
         // Note that you shouldn't try to do this if the cursor hasn't been set yet.
         // If you reach the end of the list of words, you should start at the beginning again.
         mWordTextView.setText(mData.getString(mWordCol));
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             // Change button text
             mButton.setText(getString(R.string.next_word));
 
-            // TODO (4) Show the definition
+            // COMPLETED (4) Show the definition
             mCurrentState = STATE_SHOWN;
         }
     }
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // TODO (5) Remember to close your cursor!
+        // COMPLETED (5) Remember to close your cursor!
         mData.close();
     }
 
@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
             // Set the data for MainActivity
             mData = cursor;
 
-            // TODO (2) Initialize anything that you need the cursor for, such as setting up
+            // COMPLETED (2) Initialize anything that you need the cursor for, such as setting up
             // the screen with the first word and setting any other instance variables
             mDefCol = mData.getColumnIndex(DroidTermsExampleContract.COLUMN_DEFINITION);
             mWordCol = mData.getColumnIndex(DroidTermsExampleContract.COLUMN_WORD);
